@@ -1,4 +1,10 @@
 # react-native-sqlite-storage
+
+> **Warning**
+> Se hizo un fork del proyecto original de react-native-sqlite-storage, este proyecto es para el beneficio de Antares y se ira actualizando conforme se logré avanzar
+> Primero se trabajará en Android, NO SE TRABAJARÁ WINDOWS, IOS será el último en trabajar
+
+
 SQLite3 Native Plugin for React Native for both Android (Classic and Native), iOS and Windows
 
 Foundation of this library is based on Chris Brody's Cordova SQLite plugin.
