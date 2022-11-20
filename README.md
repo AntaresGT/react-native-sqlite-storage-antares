@@ -4,6 +4,19 @@
 > Se hizo un fork del proyecto original de react-native-sqlite-storage, este proyecto es para el beneficio de Antares y se ira actualizando conforme se logré avanzar
 > Primero se trabajará en Android, NO SE TRABAJARÁ WINDOWS, IOS será el último en trabajar
 
+> **Note**
+> React Native compatible con Android es la versión 0.74.5. Está documentación es parte de un fork hecho por Antares, para el beneficio de Antares y se ira actualizando conforme se logré avanzar
+
+## Motivo
+El proyecto daba error al ejecutar el comando
+```bash
+react-native run-android --variant=release
+```
+o
+```bash
+cd android && ./gradlew assembleRelease
+```
+por lo que se procedió a hacer un fork y se corrigió el error (Actualmente funciona para mi proyecto, sería de testearlo en otros proyectos)
 
 SQLite3 Native Plugin for React Native for both Android (Classic and Native), iOS and Windows
 
@@ -51,7 +64,7 @@ Run `cd ios && pod install && cd ..`. Linking is not required in React Native 0.
 Add this to your Podfile which should be located inside the ios project subdirectory
 ```ruby
 pod 'React', :path => '../node_modules/react-native'
-pod 'react-native-sqlite-storage', :path => '../node_modules/react-native-sqlite-storage'
+pod 'react-native-sqlite-storage-antares', :path => '../node_modules/react-native-sqlite-storage-antares'
 ```
 Or use the sample Podfile included in the package by copying it over to ios subdirectory and replacing AwesomeProject inside of it with the name of your RN project.
 
@@ -152,11 +165,11 @@ module.exports = {
   ...,
   dependencies: {
     ...,
-    "react-native-sqlite-storage": {
+    "react-native-sqlite-storage-antares": {
       platforms: {
         android: {
           sourceDir:
-            "../node_modules/react-native-sqlite-storage/platforms/android-native",
+            "../node_modules/react-native-sqlite-storage-antares/platforms/android-native",
           packageImportPath: "import io.liteglue.SQLitePluginPackage;",
           packageInstance: "new SQLitePluginPackage()"
         }
@@ -176,9 +189,9 @@ module.exports = {
 // file: android/settings.gradle
 ...
 
-include ':react-native-sqlite-storage'
-project(':react-native-sqlite-storage').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sqlite-storage/platforms/android') // react-native-sqlite-storage >= 4.0.0
-// IMPORTANT: if you are working with a version less than 4.0.0 the project directory is '../node_modules/react-native-sqlite-storage/src/android'
+include ':react-native-sqlite-storage-antares'
+project(':react-native-sqlite-storage-antares').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sqlite-storage-antares/platforms/android') // react-native-sqlite-storage-antares >= 4.0.0
+// IMPORTANT: if you are working with a version less than 4.0.0 the project directory is '../node_modules/react-native-sqlite-storage-antares/src/android'
 ```
 
 #### Step 2 - Update app module Gradle Build script (located under Gradle Settings in Project Panel)
@@ -189,7 +202,7 @@ project(':react-native-sqlite-storage').projectDir = new File(rootProject.projec
 
 dependencies {
     ...
-    implementation project(':react-native-sqlite-storage')
+    implementation project(':react-native-sqlite-storage-antares')
 }
 ```
 
@@ -251,7 +264,7 @@ public class MainApplication extends Application implements ReactApplication {
 // file: index.android.js
 
 var React = require('react-native');
-var SQLite = require('react-native-sqlite-storage')
+var SQLite = require('react-native-sqlite-storage-antares')
 ...
 ```
 
@@ -267,7 +280,7 @@ Add the `SQLitePlugin` project to your solution.
 
 1. Open the solution in Visual Studio 2019
 2. Right-click Solution icon in Solution Explorer > Add > Existing Project
-3. Select `node_modules\react-native-sqlite-storage\platforms\windows\SQLitePlugin\SQLitePlugin.vcxproj`
+3. Select `node_modules\react-native-sqlite-storage-antares\platforms\windows\SQLitePlugin\SQLitePlugin.vcxproj`
 
 ### Step 2: Update the .vcxproj file
 
