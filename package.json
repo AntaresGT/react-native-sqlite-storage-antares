@@ -1,6 +1,6 @@
 {
-  "name": "react-native-sqlite-storage",
-  "version": "6.0.1",
+  "name": "react-native-sqlite-storage-antares",
+  "version": "6.1.0",
   "description": "SQLite3 bindings for React Native (Android & iOS)",
   "main": "sqlite.js",
   "scripts": {
@@ -8,10 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/andpor/react-native-sqlite-storage.git"
+    "url": "https://github.com/AntaresGT/react-native-sqlite-storage-antares.git"
   },
   "keywords": [
-    "react-native-sqlite-storage",
+    "react-native-sqlite-storage-antares",
     "react-native-sqlite",
     "react-component",
     "reactnative",
@@ -28,13 +28,13 @@
   "bugs": {
     "url": "https://github.com/andpor/react-native-sqlite-storage/issues"
   },
-  "homepage": "https://github.com/andpor/react-native-sqlite-storage",
+  "homepage": "https://github.com/AntaresGT/react-native-sqlite-storage-antares",
   "peerDependencies": {
-    "react-native": ">=0.14.0"
+    "react-native": ">=0.70.4"
   },
   "devDependencies": {
-    "react": "16.13.1",
-    "react-native": "^0.63.2",
-    "react-native-windows": "^0.63.6"
+    "react": "18.2.0",
+    "react-native": "^0.70.4",
+    "react-native-windows": "^0.70.6"
   }
 }
